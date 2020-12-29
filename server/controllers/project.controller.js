@@ -1,5 +1,5 @@
 // console.log("controller.js");
-const Project = require('../models/Project.model');
+const Project = require('../models/project.model');
 
 module.exports = {
     findAll: (req, res) => {
