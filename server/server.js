@@ -11,6 +11,6 @@ app.use(cors());
 require('./config/mongoose.config');
 
 
-require('./routes/Project.route')(app);
+require('./routes/project.route')(app);
 
 app.listen(port, () => console.log(`${port} is being listened to`));
