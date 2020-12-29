@@ -12,7 +12,7 @@ const Edit = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/Projects/${props.id}`)
+            .get(`/api/Projects/${props.id}`)
             .then((res) => {
                 console.log(res.data);
                 setName(res.data.name);
@@ -26,7 +26,7 @@ const Edit = (props) => {
     const addProject = (e) => {
         e.preventDefault();
         axios
-            .put(`http://localhost:8000/api/Projects/${props.id}`, {
+            .put(`/api/Projects/${props.id}`, {
                 name: name,
                 type: type,
                 description: description,
