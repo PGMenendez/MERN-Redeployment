@@ -14,7 +14,7 @@ const ShowAll = (props) => {
 
     useEffect(() => {
         axios
-            .get("/api/Projects")
+            .get("http://3.137.147.67:80/api/Projects")
             .then((res) => {
                 console.log(res.data);
                 setAllProjects(res.data);
