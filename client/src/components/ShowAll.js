@@ -14,7 +14,7 @@ const ShowAll = (props) => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/Projects")
+            .get("/api/Projects")
             .then((res) => {
                 console.log(res.data);
                 setAllProjects(res.data);
@@ -31,7 +31,7 @@ const ShowAll = (props) => {
       console.log("backlog button clicked");
         
         axios
-        .put(`http://localhost:8000/api/Projects/${id}`, {
+        .put(`/api/Projects/${id}`, {
             name: nm,
             dueDate: dd,
             backlog: false,
@@ -56,7 +56,7 @@ const ShowAll = (props) => {
       console.log("move to button clicked");
         
         axios
-        .put(`http://localhost:8000/api/Projects/${id}`, {
+        .put(`/api/Projects/${id}`, {
             name: nm,
             dueDate: dd,
             backlog: false,
@@ -76,7 +76,7 @@ const ShowAll = (props) => {
     const deleteProject = (e, id) => {
       e.preventDefault();
       axios
-          .delete(`http://localhost:8000/api/Projects/${id}`)
+          .delete(`/api/Projects/${id}`)
           
           .catch((err) => console.log(err));
           window.location.reload();

@@ -18,7 +18,7 @@ const ShowOne = (props) => {
 
     useEffect(() =>{
         axios
-            .get(`http://localhost:8000/api/Projects/${props.id}`)
+            .get(`/api/Projects/${props.id}`)
             .then((res) => {
                 console.log(res.data);
                 setProject(res.data);
@@ -52,7 +52,7 @@ const ShowOne = (props) => {
         // setHasPegLeg(Project.hasPegLeg);
         console.log(`Peg Leg is ${Project.hasPegLeg}`)
         axios
-        .put(`http://localhost:8000/api/Projects/${props.id}`, {
+        .put(`/api/Projects/${props.id}`, {
 
             name: name,
             position: position,
