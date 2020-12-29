@@ -13,11 +13,11 @@ const New = (props) => {
     const [dueDate, setDueDate] = useState("");
     const [nameError, setNameError] = useState("");
 
-    // console.log("load here?");
+    console.log("load here?");
     const addProject = (e) => {
         e.preventDefault();
         axios
-            .post("/api/Projects/", {
+            .post(`/api/Projects/`, {
                 name: name,
               
                 dueDate: dueDate, 
