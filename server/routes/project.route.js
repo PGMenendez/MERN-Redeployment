@@ -1,5 +1,5 @@
 // console.log("routes.js");
-const ProjectController = require('../controllers/Project.controller');
+const ProjectController = require('../controllers/project.controller');
 
 module.exports = function(app){
     app.get('/api/Projects', ProjectController.findAll);
