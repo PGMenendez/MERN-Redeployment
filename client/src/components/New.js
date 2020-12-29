@@ -17,7 +17,7 @@ const New = (props) => {
     const addProject = (e) => {
         e.preventDefault();
         axios
-            .post("http://localhost:8000/api/projects/", {
+            .post("/api/projects/", {
                 name: name,
               
                 dueDate: dueDate, 
